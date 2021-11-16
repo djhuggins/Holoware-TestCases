@@ -1,6 +1,8 @@
-# ABFE-TestSets
+# Holoware-TestCases
 
-Protein and ligand structure files for the paper "Comparing the performance of different AMBER/GAFF forcefields, partial charge assignments, and water models in absolute binding free energy calculations"
+Input files for the paper "Comparing the performance of different AMBER/GAFF forcefields, partial charge assignments, and water models in absolute binding free energy calculations"
+
+Protein and ligand structure files are in "Structures" directory.
 
 	Protein structure : protein.pdb
 	Ligand structures (AM1-BCC charges): ligands_am1bcc.mol2
