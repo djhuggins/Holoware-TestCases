@@ -1,0 +1,114 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2021-07-02</DateGenerated>
+  </Info>
+  <Residues>
+    <Residue name="6TD">
+      <Atom name="CAA" type="c3" charge="0.1137"/>
+      <Atom name="OAP" type="os" charge="-0.3259"/>
+      <Atom name="CAS" type="ca" charge="0.1301"/>
+      <Atom name="CAG" type="ca" charge="-0.182"/>
+      <Atom name="CAE" type="ca" charge="-0.0815"/>
+      <Atom name="CAF" type="ca" charge="-0.182"/>
+      <Atom name="CAD" type="ca" charge="-0.0815"/>
+      <Atom name="CAR" type="ca" charge="-0.1323"/>
+      <Atom name="CAK" type="c3" charge="-0.0474"/>
+      <Atom name="CAU" type="cc" charge="0.4348"/>
+      <Atom name="NAL" type="nd" charge="-0.346"/>
+      <Atom name="NAM" type="nd" charge="-0.285"/>
+      <Atom name="CAY" type="cc" charge="0.3209"/>
+      <Atom name="SAQ" type="ss" charge="-0.1098"/>
+      <Atom name="NAZ" type="na" charge="-0.1312"/>
+      <Atom name="NAN" type="nc" charge="-0.4118"/>
+      <Atom name="CAV" type="cd" charge="0.4782"/>
+      <Atom name="CAT" type="cd" charge="-0.1589"/>
+      <Atom name="CAJ" type="cc" charge="-0.0912"/>
+      <Atom name="CAW" type="ca" charge="-0.1148"/>
+      <Atom name="CAH" type="ca" charge="-0.07"/>
+      <Atom name="CAB" type="ca" charge="-0.158"/>
+      <Atom name="CAC" type="ca" charge="-0.097"/>
+      <Atom name="CAI" type="ca" charge="-0.148"/>
+      <Atom name="CAX" type="ca" charge="-0.0252"/>
+      <Atom name="NAO" type="na" charge="-0.1814"/>
+      <Atom name="HAA1" type="h1" charge="0.0447"/>
+      <Atom name="HAA2" type="h1" charge="0.0447"/>
+      <Atom name="HAA3" type="h1" charge="0.0447"/>
+      <Atom name="HCAG" type="ha" charge="0.145"/>
+      <Atom name="HCAE" type="ha" charge="0.142"/>
+      <Atom name="HCAF" type="ha" charge="0.145"/>
+      <Atom name="HCAD" type="ha" charge="0.142"/>
+      <Atom name="HAK1" type="hc" charge="0.0802"/>
+      <Atom name="HAK2" type="hc" charge="0.0802"/>
+      <Atom name="HCAJ" type="ha" charge="0.171"/>
+      <Atom name="HCAH" type="ha" charge="0.139"/>
+      <Atom name="HCAB" type="ha" charge="0.135"/>
+      <Atom name="HCAC" type="ha" charge="0.135"/>
+      <Atom name="HCAI" type="ha" charge="0.138"/>
+      <Atom name="HNAO" type="hn" charge="0.2977"/>
+      <Bond atomName1="CAA" atomName2="OAP"/>
+      <Bond atomName1="CAA" atomName2="HAA1"/>
+      <Bond atomName1="CAA" atomName2="HAA2"/>
+      <Bond atomName1="CAA" atomName2="HAA3"/>
+      <Bond atomName1="OAP" atomName2="CAS"/>
+      <Bond atomName1="CAS" atomName2="CAG"/>
+      <Bond atomName1="CAS" atomName2="CAF"/>
+      <Bond atomName1="CAG" atomName2="CAE"/>
+      <Bond atomName1="CAG" atomName2="HCAG"/>
+      <Bond atomName1="CAE" atomName2="CAR"/>
+      <Bond atomName1="CAE" atomName2="HCAE"/>
+      <Bond atomName1="CAF" atomName2="CAD"/>
+      <Bond atomName1="CAF" atomName2="HCAF"/>
+      <Bond atomName1="CAD" atomName2="CAR"/>
+      <Bond atomName1="CAD" atomName2="HCAD"/>
+      <Bond atomName1="CAR" atomName2="CAK"/>
+      <Bond atomName1="CAK" atomName2="CAU"/>
+      <Bond atomName1="CAK" atomName2="HAK1"/>
+      <Bond atomName1="CAK" atomName2="HAK2"/>
+      <Bond atomName1="CAU" atomName2="NAL"/>
+      <Bond atomName1="CAU" atomName2="NAZ"/>
+      <Bond atomName1="NAL" atomName2="NAM"/>
+      <Bond atomName1="NAM" atomName2="CAY"/>
+      <Bond atomName1="CAY" atomName2="SAQ"/>
+      <Bond atomName1="CAY" atomName2="NAZ"/>
+      <Bond atomName1="SAQ" atomName2="CAV"/>
+      <Bond atomName1="NAZ" atomName2="NAN"/>
+      <Bond atomName1="NAN" atomName2="CAV"/>
+      <Bond atomName1="CAV" atomName2="CAT"/>
+      <Bond atomName1="CAT" atomName2="CAJ"/>
+      <Bond atomName1="CAT" atomName2="NAO"/>
+      <Bond atomName1="CAJ" atomName2="CAW"/>
+      <Bond atomName1="CAJ" atomName2="HCAJ"/>
+      <Bond atomName1="CAW" atomName2="CAH"/>
+      <Bond atomName1="CAW" atomName2="CAX"/>
+      <Bond atomName1="CAH" atomName2="CAB"/>
+      <Bond atomName1="CAH" atomName2="HCAH"/>
+      <Bond atomName1="CAB" atomName2="CAC"/>
+      <Bond atomName1="CAB" atomName2="HCAB"/>
+      <Bond atomName1="CAC" atomName2="CAI"/>
+      <Bond atomName1="CAC" atomName2="HCAC"/>
+      <Bond atomName1="CAI" atomName2="CAX"/>
+      <Bond atomName1="CAI" atomName2="HCAI"/>
+      <Bond atomName1="CAX" atomName2="NAO"/>
+      <Bond atomName1="NAO" atomName2="HNAO"/>
+    </Residue>
+  </Residues>
+  <PeriodicTorsionForce>
+    <Proper type1="nd" type2="cc" type3="ss" type4="cd" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Proper type1="nc" type2="cd" type3="ss" type4="cc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Proper type1="cd" type2="cd" type3="ss" type4="cc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Proper type1="na" type2="cc" type3="ss" type4="cd" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Proper type1="ca" type2="ca" type3="cc" type4="cd" periodicity1="2" phase1="3.141592653589793" k1="2.11292"/>
+    <Proper type1="ca" type2="ca" type3="cc" type4="ha" periodicity1="2" phase1="3.141592653589793" k1="2.9288"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="os" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="ha" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cc" type2="c3" type3="na" type4="nd" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cc" type2="na" type3="nd" type4="ss" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="na" type2="cc" type3="cc" type4="nc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cd" type2="cd" type3="nc" type4="ss" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cd" type2="cc" type3="cd" type4="na" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="cc" type2="ca" type3="cd" type4="ha" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="cc" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="ca" type2="ca" type3="ca" type4="na" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+    <Improper type1="na" type2="ca" type3="cd" type4="hn" periodicity1="2" phase1="3.141592653589793" k1="4.6024"/>
+  </PeriodicTorsionForce>
+</ForceField>

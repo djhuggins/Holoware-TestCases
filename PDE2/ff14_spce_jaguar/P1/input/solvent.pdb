@@ -1,0 +1,133 @@
+HEADER 4C1I_ligand
+ATOM      1 C1   LIG     1     -16.065  23.576  26.645  0.00  0.75          C
+ATOM      2 C2   LIG     1     -16.207  23.216  25.285  0.00  0.07          C
+ATOM      3 C3   LIG     1     -15.155  23.523  24.440  0.00  0.34          C
+ATOM      4 C4   LIG     1     -13.991  24.446  26.097  0.00  0.61          C
+ATOM      5 C5   LIG     1     -16.767  22.518  23.393  0.00  0.33          C
+ATOM      6 N6   LIG     1     -14.002  24.146  24.791  0.00 -0.79          N
+ATOM      7 N7   LIG     1     -14.924  24.208  27.026  0.00 -0.86          N
+ATOM      8 N8   LIG     1     -15.542  23.051  23.220  0.00 -0.02          N
+ATOM      9 N9   LIG     1     -17.201  22.597  24.625  0.00 -0.74          N
+ATOM     10 C10  LIG     1     -21.332  26.113  19.136  0.00 -0.34          C
+ATOM     11 N11  LIG     1     -17.023  23.309  27.617  0.00 -0.92          N
+ATOM     12 C12  LIG     1     -19.947  25.508  18.895  0.00  0.23          C
+ATOM     13 C13  LIG     1     -19.170  25.246  20.197  0.00 -0.01          C
+ATOM     14 C14  LIG     1     -17.772  24.683  19.921  0.00 -0.15          C
+ATOM     15 C15  LIG     1     -16.961  24.361  21.189  0.00  0.25          C
+ATOM     16 C16  LIG     1     -15.628  23.689  20.811  0.00 -0.40          C
+ATOM     17 O17  LIG     1     -14.686  21.077  20.509  0.00 -0.69          O
+ATOM     18 C18  LIG     1     -14.020  20.667  22.748  0.00 -0.42          C
+ATOM     19 C19  LIG     1     -14.768  23.097  21.957  0.00  0.17          C
+ATOM     20 C20  LIG     1     -14.088  21.719  21.619  0.00  0.19          C
+ATOM     21 H21  LIG     1     -13.103  24.947  26.451  0.00  0.04          H
+ATOM     22 H22  LIG     1     -17.293  22.086  22.559  0.00  0.11          H
+ATOM     23 H23  LIG     1     -21.854  26.265  18.192  0.00  0.08          H
+ATOM     24 H24  LIG     1     -21.942  25.452  19.749  0.00  0.07          H
+ATOM     25 H25  LIG     1     -21.270  27.076  19.640  0.00  0.07          H
+ATOM     26 H26  LIG     1     -16.845  23.593  28.571  0.00  0.45          H
+ATOM     27 H27  LIG     1     -17.879  22.840  27.359  0.00  0.44          H
+ATOM     28 H28  LIG     1     -19.374  26.173  18.248  0.00 -0.04          H
+ATOM     29 H29  LIG     1     -20.057  24.575  18.342  0.00 -0.04          H
+ATOM     30 H30  LIG     1     -19.728  24.543  20.817  0.00  0.00          H
+ATOM     31 H31  LIG     1     -19.083  26.166  20.774  0.00 -0.00          H
+ATOM     32 H32  LIG     1     -17.213  25.387  19.302  0.00  0.03          H
+ATOM     33 H33  LIG     1     -17.881  23.775  19.324  0.00  0.03          H
+ATOM     34 H34  LIG     1     -17.548  23.703  21.829  0.00 -0.05          H
+ATOM     35 H35  LIG     1     -16.776  25.269  21.766  0.00 -0.02          H
+ATOM     36 H36  LIG     1     -15.026  24.402  20.245  0.00  0.11          H
+ATOM     37 H37  LIG     1     -15.859  22.874  20.127  0.00  0.11          H
+ATOM     38 H38  LIG     1     -15.553  20.762  20.774  0.00  0.47          H
+ATOM     39 H39  LIG     1     -13.569  21.087  23.645  0.00  0.12          H
+ATOM     40 H40  LIG     1     -15.008  20.302  23.026  0.00  0.10          H
+ATOM     41 H41  LIG     1     -13.424  19.801  22.457  0.00  0.14          H
+ATOM     42 H42  LIG     1     -13.970  23.813  22.162  0.00  0.08          H
+ATOM     43 H43  LIG     1     -13.066  21.934  21.303  0.00  0.08          H
+TER
+CONECT    1    2
+CONECT    1    7
+CONECT    1   11
+CONECT    2    3
+CONECT    2    9
+CONECT    3    6
+CONECT    3    8
+CONECT    4    6
+CONECT    4    7
+CONECT    4   21
+CONECT    5    8
+CONECT    5    9
+CONECT    5   22
+CONECT    8   19
+CONECT   10   12
+CONECT   10   23
+CONECT   10   24
+CONECT   10   25
+CONECT   11   26
+CONECT   11   27
+CONECT   12   13
+CONECT   12   28
+CONECT   12   29
+CONECT   13   14
+CONECT   13   30
+CONECT   13   31
+CONECT   14   15
+CONECT   14   32
+CONECT   14   33
+CONECT   15   16
+CONECT   15   34
+CONECT   15   35
+CONECT   16   19
+CONECT   16   36
+CONECT   16   37
+CONECT   17   20
+CONECT   17   38
+CONECT   18   20
+CONECT   18   39
+CONECT   18   40
+CONECT   18   41
+CONECT   19   20
+CONECT   19   42
+CONECT   20   43
+CONECT    1    2
+CONECT    1    7
+CONECT    1   11
+CONECT    2    3
+CONECT    2    9
+CONECT    3    6
+CONECT    3    8
+CONECT    4    6
+CONECT    4    7
+CONECT    4   21
+CONECT    5    8
+CONECT    5    9
+CONECT    5   22
+CONECT    8   19
+CONECT   10   12
+CONECT   10   23
+CONECT   10   24
+CONECT   10   25
+CONECT   11   26
+CONECT   11   27
+CONECT   12   13
+CONECT   12   28
+CONECT   12   29
+CONECT   13   14
+CONECT   13   30
+CONECT   13   31
+CONECT   14   15
+CONECT   14   32
+CONECT   14   33
+CONECT   15   16
+CONECT   15   34
+CONECT   15   35
+CONECT   16   19
+CONECT   16   36
+CONECT   16   37
+CONECT   17   20
+CONECT   17   38
+CONECT   18   20
+CONECT   18   39
+CONECT   18   40
+CONECT   18   41
+CONECT   19   20
+CONECT   19   42
+CONECT   20   43
