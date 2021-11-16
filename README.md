@@ -1,6 +1,8 @@
 # Holoware-TestCases
 
-Input files for the paper "Comparing the performance of different AMBER/GAFF forcefields, partial charge assignments, and water models in absolute binding free energy calculations"
+Input and structure files for the paper "Comparing the performance of different AMBER/GAFF forcefields, partial charge assignments, and water models in absolute binding free energy calculations"
+
+Input files are in the directories named by test case. Within each test case directory are the 16 parameter set directories. Within each parameter set directory are the ligand directories.
 
 Protein and ligand structure files are in "Structures" directory.
 
