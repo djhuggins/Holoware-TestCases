@@ -38,8 +38,8 @@ else:
 		raise ValueError('Please select runflag from {}'.format(allowedrunflags))
 
 #Forcefield
-proteinXML='parameters/protein.ff14SB.xml'
-forcefieldXML='parameters/gaff-2.11.xml'
+proteinXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/protein.ff14SB.xml'
+forcefieldXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/gaff/ffxml/gaff-2.11.xml'
 waterModel='tip4pew'
 
 #System
@@ -65,8 +65,8 @@ equilibrationIterations=200
 iterationsPerCheckpoint=100
 extendIterations=1000
 
-waterXML='parameters/'+waterModel+'_standard.xml'
-ionXML='parameters/'+waterModel+'_HFE_multivalent.xml'
+waterXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/'+waterModel+'_standard.xml'
+ionXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/'+waterModel+'_HFE_multivalent.xml'
 
 print("Padding:", boxPadding)
 print("Forcefield:", proteinXML, " ", forcefieldXML, " ", waterXML, " ", ionXML)
@@ -74,11 +74,7 @@ print("Forcefield:", proteinXML, " ", forcefieldXML, " ", waterXML, " ", ionXML)
 pdb = app.PDBFile('input/complex.pdb')
 forcefield = app.ForceField(proteinXML, waterXML, ionXML, forcefieldXML, 'input/ligand.xml')
 solvated = app.Modeller (pdb.topology, pdb.positions)
-
 solvated.addExtraParticles(forcefield)
-maxSize = max(max((pos[i] for pos in pdb.positions))-min((pos[i] for pos in pdb.positions)) for i in range(3))
-vectors = mm.Vec3(1,0,0), mm.Vec3(0,1,0), mm.Vec3(0.5,0.5,math.sqrt(2)/2)
-boxVectors = [(maxSize+boxPadding)*v for v in vectors]
 solvated.addSolvent(forcefield, model=waterModel, ionicStrength=ionicStrength, neutralize=True, padding=boxPadding)
 system = forcefield.createSystem(solvated.topology, nonbondedMethod=app.PME,
     nonbondedCutoff=1.0*unit.nanometers, constraints=app.HBonds, rigidWater=True,
@@ -93,8 +89,6 @@ ligand_a_bonds = []
 ligand_a_angles =[]
 ligand_a_torsions =[]
 
-        
-
 #Apply harmonic restraints
 springconstant=1*unit.kilocalorie_per_mole/unit.angstroms**2
 bondlength=2.47082*unit.angstroms
@@ -103,7 +97,7 @@ harmonicforce=mm.CustomBondForce(bond_energy_function)
 harmonicforce.addPerBondParameter('r0')
 harmonicforce.addPerBondParameter('K')
 harmonicforce.addGlobalParameter('lambda_restraints', 1.0)
-harmonicforce.addBond(3548,5369, [bondlength,springconstant])
+harmonicforce.addBond(3548,5365, [bondlength,springconstant])
 new_force_index=system.getNumForces()
 harmonicforce.setForceGroup(new_force_index)
 system.addForce(harmonicforce)
@@ -115,11 +109,11 @@ angleforce=mm.CustomAngleForce(angle_energy_function)
 angleforce.addPerAngleParameter('theta0')
 angleforce.addPerAngleParameter('k')
 angleforce.addGlobalParameter('lambda_restraints', 1.0)
-angleforce.addAngle(5367,5369,3548, [restrainedangle,angleforceconstant])
+angleforce.addAngle(5363,5365,3548, [restrainedangle,angleforceconstant])
 angleforce.setForceGroup(new_force_index)
 
 restrainedangle=1.98793*unit.radian
-angleforce.addAngle(5369,3548,3545, [restrainedangle,angleforceconstant])
+angleforce.addAngle(5365,3548,3545, [restrainedangle,angleforceconstant])
 system.addForce(angleforce)
 
 torsionforceconstant=5*unit.kilocalorie_per_mole
@@ -129,12 +123,12 @@ torsionforce.addPerTorsionParameter('n')
 torsionforce.addPerTorsionParameter('theta0')
 torsionforce.addPerTorsionParameter('k')
 torsionforce.addGlobalParameter('lambda_restraints', 1.0)
-torsionforce.addTorsion(5350,5367,5369,3548, [1,-0.305051*unit.radian,torsionforceconstant])
+torsionforce.addTorsion(5346,5363,5365,3548, [1,-0.305051*unit.radian,torsionforceconstant])
 torsionforce.setForceGroup(new_force_index)
 
-torsionforce.addTorsion(5367,5369,3548,3545, [1,-4.27506*unit.radian,torsionforceconstant])
+torsionforce.addTorsion(5363,5365,3548,3545, [1,-4.27506*unit.radian,torsionforceconstant])
 
-torsionforce.addTorsion(5369,3548,3545,3547, [1,-5.60026*unit.radian,torsionforceconstant])
+torsionforce.addTorsion(5365,3548,3545,3547, [1,-5.60026*unit.radian,torsionforceconstant])
 system.addForce(torsionforce)  
 #Get date from forcefield
 bond_force=forces['HarmonicBondForce']
@@ -219,9 +213,9 @@ reload(openmmtools.alchemy)
 
 #DEBUG info
 sys = compound_state.get_system()
-#file = open('DEBUG_restraint.xml','w')
-#file.write(mm.XmlSerializer.serialize(sys))
-#file.close()
+file = open('DEBUG_restraint.xml','w')
+file.write(mm.XmlSerializer.serialize(sys))
+file.close()
 
 nstates=restraintSteps+1
 print("There will be ", nstates, " states in total")

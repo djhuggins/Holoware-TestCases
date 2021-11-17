@@ -38,8 +38,8 @@ else:
 		raise ValueError('Please select runflag from {}'.format(allowedrunflags))
 
 #Forcefield
-proteinXML='parameters/protein.ff14SB.xml'
-forcefieldXML='parameters/gaff-2.11.xml'
+proteinXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/protein.ff14SB.xml'
+forcefieldXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/gaff/ffxml/gaff-2.11.xml'
 waterModel='tip4pew'
 
 #System
@@ -65,8 +65,8 @@ equilibrationIterations=200
 iterationsPerCheckpoint=100
 extendIterations=1000
 
-waterXML='parameters/'+waterModel+'_standard.xml'
-ionXML='parameters/'+waterModel+'_HFE_multivalent.xml'
+waterXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/'+waterModel+'_standard.xml'
+ionXML='/home/dhuggins/Programs/Miniconda/lib/python3.6/site-packages/openmmforcefields/ffxml/amber/'+waterModel+'_HFE_multivalent.xml'
 
 print("Padding:", boxPadding)
 print("Forcefield:", proteinXML, " ", forcefieldXML, " ", waterXML, " ", ionXML)
@@ -74,7 +74,6 @@ print("Forcefield:", proteinXML, " ", forcefieldXML, " ", waterXML, " ", ionXML)
 pdb = app.PDBFile('input/solvent.pdb')
 forcefield = app.ForceField(proteinXML, waterXML, ionXML, forcefieldXML, 'input/ligand.xml')
 solvated = app.Modeller (pdb.topology, pdb.positions)
-solvated.addExtraParticles(forcefield)
 solvated.addSolvent(forcefield, model=waterModel, ionicStrength=ionicStrength, neutralize=True, padding=boxPadding)
 system = forcefield.createSystem(solvated.topology, nonbondedMethod=app.PME,
     nonbondedCutoff=1.0*unit.nanometers, constraints=app.HBonds, rigidWater=True,
