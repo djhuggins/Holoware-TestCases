@@ -20,7 +20,17 @@ Once all calculations are complete, run the following command:
 
 - python results.py
 
-The results file is named ddG.res
+The results file is named ddG.res. Failed calculations can be restarted as follows:
+
+- python solvent.py recover > output/solvent.out
+- python restraint.py recover > output/restraint.out
+- python complex.py recover > output/complex.out
+
+Calculations can be extened to longer timescales as follows:
+
+- python solvent.py extend > output/solvent.out
+- python restraint.py extend > output/restraint.out
+- python complex.py extend > output/complex.out
 
 The python code requires openmm and openmmtools. It is known to work with the following python packages:
 
